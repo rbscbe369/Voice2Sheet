@@ -1,36 +1,34 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Voice2Sheet 🎙️➡️📊
 
-## Getting Started
+**Voice2Sheet** is an AI-powered Voice CRM that allows professionals to dictate complex medical or business records, auto-correct them using Google Gemini, and instantly sync them to dynamically generated cloud databases and exportable Excel files.
 
-First, run the development server:
+## 🚀 Key Features
 
+- **Dynamic Database Generation**: Upload any blank Excel template, and the app will instantly detect the headers and automatically build a matching SQL table in your Supabase cloud—no database knowledge required.
+- **AI Auto-Correction**: Built-in voice recognition (tuned for local accents) captures your speech, while Google Gemini 3.5 Flash actively corrects grammar, medical terminology, and standardizes formats before saving.
+- **Smart Date Math**: Say conversational terms like "yesterday" or "last week", and the AI will automatically calculate and inject the correct calendar date (YYYY-MM-DD).
+- **Media Attachments**: Snap pictures of medical charts, bills, or receipts and attach them directly to your voice entries via Cloudinary integration.
+- **Universal History Dashboard**: A fully searchable, date-filterable CRM dashboard to track all voice entries.
+- **1-Click Excel Export**: Filter your data and instantly download it back into a pristine `.xlsx` file.
+- **AI Push Notifications**: Background service workers deliver daily AI-generated briefings of your recent CRM activity.
+
+## 🛠️ Tech Stack
+- **Framework:** Next.js (React)
+- **Styling:** Tailwind CSS (Glassmorphism UI)
+- **AI Engine:** Google Gemini 3.5 Flash API
+- **Database:** Supabase (PostgreSQL)
+- **Authentication:** Clerk
+- **Storage:** Cloudinary
+
+## ⚙️ Local Setup
+To run this project locally, you will need to add a `.env.local` file with the following keys:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_key
+CLERK_SECRET_KEY=your_clerk_secret
+GEMINI_API_KEY=your_gemini_key
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Then run:
+```bash
+npm install
+npm run dev
+```
