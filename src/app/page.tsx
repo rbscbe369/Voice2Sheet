@@ -16,7 +16,7 @@ export default async function Home() {
       <p className="text-lg text-blue-100 mb-8 max-w-lg text-center font-medium">
         The general-purpose, mobile-first, voice-driven CRM and data entry software.
       </p>
-      <div className="flex gap-4">
+      <div className="flex gap-4 mb-20">
         <Link href="/sign-in" className="px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold shadow-md hover:bg-blue-700 transition">
           Sign In
         </Link>
@@ -24,6 +24,21 @@ export default async function Home() {
           Get Started
         </Link>
       </div>
+
+      {/* Global Footer */}
+      <footer className="absolute bottom-0 w-full py-6 text-center border-t border-gray-800 bg-[#0a0f1d]">
+        <div className="flex justify-center gap-6 mb-2">
+          <Link href="/docs" className="text-xs font-semibold text-gray-400 hover:text-white transition">Setup Guide</Link>
+          <Link href="/privacy" className="text-xs font-semibold text-gray-400 hover:text-white transition">Privacy Policy</Link>
+          <Link href="/terms" className="text-xs font-semibold text-gray-400 hover:text-white transition">Terms of Service</Link>
+        </div>
+        <p className="text-xs font-bold text-gray-500 tracking-wide uppercase">
+          &copy; 2026 DIGIREACH TECHNOLOGIES. All rights reserved.
+        </p>
+        <p className="text-[10px] font-semibold text-blue-500 mt-1 uppercase tracking-widest">
+          "A Product of DIGIREACH TECHNOLOGIES"
+        </p>
+      </footer>
     </main>
   );
 }
