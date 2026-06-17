@@ -37,6 +37,21 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
         <main className="flex-1 max-w-md mx-auto w-full p-4 sm:max-w-2xl sm:p-6 lg:max-w-4xl relative z-10">
           {children}
         </main>
+        
+        {/* Global Footer */}
+        <footer className="relative z-10 py-6 text-center border-t border-gray-200/50 mt-auto backdrop-blur-sm bg-white/30">
+          <div className="flex justify-center gap-6 mb-2">
+            <Link href="/docs" className="text-xs font-semibold text-gray-500 hover:text-blue-600 transition">Setup Guide</Link>
+            <Link href="/privacy" className="text-xs font-semibold text-gray-500 hover:text-blue-600 transition">Privacy Policy</Link>
+            <Link href="/terms" className="text-xs font-semibold text-gray-500 hover:text-blue-600 transition">Terms of Service</Link>
+          </div>
+          <p className="text-xs font-bold text-gray-600 tracking-wide uppercase">
+            &copy; 2026 DIGIREACH TECHNOLOGIES. All rights reserved.
+          </p>
+          <p className="text-[10px] font-semibold text-blue-600 mt-1 uppercase tracking-widest">
+            "A Product of DIGIREACH TECHNOLOGIES"
+          </p>
+        </footer>
       </div>
     </Show>
   );
